@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kudo Design 精準CAD代畫服務 | 專業機械CAD代畫、SolidWorks代畫</title>
+<meta name="description" content="Kudo Design 提供專業 CAD 代畫、SolidWorks 代畫、機械設計繪圖與圖紙轉換（DWG/DXF/STEP/IGES/PDF）。專注於每一張工程圖的精準與效率。聯絡：c0925279626@gmail.com" />
+<meta name="keywords" content="CAD代畫, SolidWorks代畫, 圖紙轉換, 機械設計, 機械繪圖, Kudo Design" />
+<link rel="canonical" href="https://kudoconan9.github.io/kudo-design/" />
+<link rel="icon" href="/favicon.ico" />
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --bg:#0F172A;     /* 深藍主色 */
+    --accent:#38BDF8; /* 亮藍點綴 */
+    --card:#0b1220;
+    --muted:#94a3b8;
+  }
+  html,body{height:100%;}
+  body{margin:0;background:var(--bg);color:#E6EEF8;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; -webkit-font-smoothing:antialiased;}
+  a{color:var(--accent)}
+  .glass{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); border-radius:.5rem;}
+  .muted{color:var(--muted)}
+  .container{max-width:1100px;margin:0 auto;padding:0 16px;}
+  .floating-cta{position:fixed;right:18px;bottom:18px;z-index:60;}
+  input,textarea,select{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);padding:.5rem;border-radius:6px;color:inherit;width:100%;}
+  .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  @media(min-width:768px){.case-grid{grid-template-columns:repeat(3,1fr)}}
+  footer{background:#071027;padding:28px 0;color:var(--muted)}
+  .btn-primary{background:var(--accent);color:var(--bg);padding:.6rem 1rem;border-radius:.5rem;font-weight:600;}
+  header .nav-link{margin-left:12px}
+  /* small focus */
+  :focus{outline:3px solid rgba(56,189,248,0.12);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="glass backdrop-blur-md fixed top-0 w-full z-50">
+  <div class="container py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- Logo -->
+      <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true">
+        <rect width="24" height="24" rx="5" fill="#38BDF8"></rect>
+        <path d="M5 12h14" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="font-bold text-lg">Kudo Design 精準CAD代畫服務</div>
+        <div class="text-xs muted">專注於每一張工程圖的精準與效率。</div>
+      </div>
+    </div>
+
+    <nav class="hidden md:flex items-center text-sm">
+      <a class="nav-link" href="#services">服務</a>
+      <a class="nav-link" href="#process">流程</a>
+      <a class="nav-link" href="#pricing">價格</a>
+      <a class="nav-link" href="#cases">案例</a>
+      <a class="nav-link" href="#reviews">評價</a>
+      <a class="nav-link" href="#blog">機械設計小技巧</a>
+      <a class="nav-link btn-primary" href="#contact">聯絡我們</a>
+    </nav>
+
+    <div class="md:hidden">
+      <button id="menuBtn" aria-expanded="false" class="p-2 rounded glass">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden px-4 pb-4">
+    <a class="block py-2" href="#services">服務</a>
+    <a class="block py-2" href="#process">流程</a>
+    <a class="block py-2" href="#pricing">價格</a>
+    <a class="block py-2" href="#cases">案例</a>
+    <a class="block py-2" href="#reviews">評價</a>
+    <a class="block py-2" href="#blog">機械設計小技巧</a>
+    <a class="block py-2" href="#contact">聯絡我們</a>
+  </div>
+</header>
+
+<main class="pt-28 pb-20">
+  <!-- Hero -->
+  <section class="container py-12">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">專業機械 CAD 代畫與圖紙轉換服務</h1>
+        <p class="mt-4 muted max-w-xl">由 Kudo Design 提供：快速、保密、精準。專長 SolidWorks 繪圖、2D/3D 圖面整理與格式轉換（DWG/DXF/STEP/IGES/PDF）。</p>
+        <div class="mt-6 flex gap-3">
+          <a class="btn-primary" href="mailto:c0925279626@gmail.com?subject=CAD代畫服務詢價&body=您好，我想詢問CAD代畫服務，以下是我的需求：%0A%0A- 服務項目：%0A- 圖紙數量：%0A- 交期：%0A- 其他備註：">📩 立即詢價</a>
+          <a class="px-4 py-2 rounded border border-white/10" href="#pricing">查看價格</a>
+        </div>
+        <div class="mt-6 text-sm muted">聯絡信箱： <a href="mailto:c0925279626@gmail.com">c0925279626@gmail.com</a></div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow-lg card-img">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1555685812-4b943f1bfb6a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件示意圖" class="w-full h-64 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="container py-12">
+    <h2 class="text-2xl font-bold mb-6">我們的服務</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="glass p-4">
+        <h3 class="font-semibold">CAD 代畫服務</h3>
+        <p class="muted text-sm mt-2">2D 機械圖、工程圖繪製與標註，符合加工規範與檢驗要求。</p>
+        <div class="mt-3 text-sm"><a href="mailto:c0925279626@gmail.com?subject=CAD代畫詢價">詢價</a></div>
+      </div>
+
+      <div class="glass p-4">
+        <h3 class="font-semibold">SolidWorks 代畫</h3>
+        <p class="muted text-sm mt-2">零件建模、裝配與工程圖建立，支援 BOM/剖面圖。</p>
+        <div class="mt-3 text-sm"><a href="mailto:c0925279626@gmail.com?subject=SolidWorks代畫詢價">詢價</a></div>
+      </div>
+
+      <div class="glass p-4">
+        <h3 class="font-semibold">機械設計繪圖</h3>
+        <p class="muted text-sm mt-2">協助機構設計繪圖、尺寸校核、製造適性改善。</p>
+        <div class="mt-3 text-sm"><a href="mailto:c0925279626@gmail.com?subject=機械設計繪圖詢價">詢價</a></div>
+      </div>
+
+      <div class="glass p-4">
+        <h3 class="font-semibold">圖紙轉換 & 整理</h3>
+        <p class="muted text-sm mt-2">DWG/DXF/PDF ⇄ STEP/IGES，圖層整理、標註優化。</p>
+        <div class="mt-3 text-sm"><a href="mailto:c0925279626@gmail.com?subject=圖紙轉換詢價">詢價</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="container py-12">
+    <h2 class="text-2xl font-bold mb-6">工作流程</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="glass p-4"><h4 class="font-semibold">1. 提出需求</h4><p class="muted text-sm mt-2">透過 Email 提供圖檔或草圖、數量與交期。</p></div>
+      <div class="glass p-4"><h4 class="font-semibold">2. 報價確認</h4><p class="muted text-sm mt-2">收到需求後提供報價與交期，雙方確認後開始作圖。</p></div>
+      <div class="glass p-4"><h4 class="font-semibold">3. 繪製交付</h4><p class="muted text-sm mt-2">依約定格式交付 DWG / PDF / STEP 檔案，並保留修改次數。</p></div>
+      <div class="glass p-4"><h4 class="font-semibold">4. 驗收 & 完稿</h4><p class="muted text-sm mt-2">確認無誤後完成交付，提供必要修改支援。</p></div>
+      <div class="glass p-4"><h4 class="font-semibold">4. 驗收 & 完稿</h4><p class="muted text-sm mt-2">確認無誤後完成交付，提供必要修改支援。</p></div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="container py-12">
+    <h2 class="text-2xl font-bold mb-4">價格範例（參考）</h2>
+    <p class="muted text-sm mb-6">實際報價會依圖面複雜度、零件數量與需求調整，歡迎聯絡索取精準報價。</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass p-6 rounded-lg">
+        <div class="text-xl font-semibold">簡單零件圖</div>
+        <div class="muted mt-2">標註少、幾何簡單</div>
+        <div class="mt-4 text-2xl font-bold">NT$ 800 起</div>
+        <div class="mt-4 text-sm"><a href="mailto:c0925279626@gmail.com?subject=簡單零件圖詢價">立即詢價</a></div>
+      </div>
+
+      <div class="glass p-6 rounded-lg">
+        <div class="text-xl font-semibold">中等複雜度</div>
+        <div class="muted mt-2">標註較多或需轉檔整理</div>
+        <div class="mt-4 text-2xl font-bold">NT$ 1,200 起</div>
+        <div class="mt-4 text-sm"><a href="mailto:c0925279626@gmail.com?subject=中等複雜度詢價">立即詢價</a></div>
+      </div>
+
+      <div class="glass p-6 rounded-lg">
+        <div class="text-xl font-semibold">高複雜度 / 裝配圖</div>
+        <div class="muted mt-2">多零件、BOM、3D→2D 轉繪</div>
+        <div class="mt-4 text-2xl font-bold">NT$ 1,800 起</div>
+        <div class="mt-4 text-sm"><a href="mailto:c0925279626@gmail.com?subject=高複雜度詢價">立即詢價</a></div>
+      </div>
+    </div>
+
+    <p class="muted text-sm mt-4">批量或專案可議價，10 張以上可享 5–10% 折扣（依圖面情況而定）。</p>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases" class="container py-12">
+    <h2 class="text-2xl font-bold mb-6">成功案例</h2>
+    <p class="muted mb-4">示意機械零件圖（示例圖片）。真實案例圖檔可於聯絡後索取。</p>
+    <div class="case-grid">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1581091870621-cd7b2e7f4c9e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 1" class="rounded object-cover h-40 w-full">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1581091012184-7d09b2c2e8b6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 2" class="rounded object-cover h-40 w-full">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1581091228756-8f0f23a1b1b9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 3" class="rounded object-cover h-40 w-full">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1581090968466-1d9f2c2f3f12?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 4" class="rounded object-cover h-40 w-full">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1527442232273-1c7f2f1c2c3b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 5" class="rounded object-cover h-40 w-full">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1527442295422-1b2f1c2f3f4c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="機械零件 6" class="rounded object-cover h-40 w-full">
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="container py-12">
+    <h2 class="text-2xl font-bold mb-6">客戶評價</h2>
+
+    <div id="reviewsList" class="grid md:grid-cols-3 gap-6 mb-6">
+      <!-- Seed reviews -->
+      <div class="glass p-4 rounded">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[--accent] flex items-center justify-center text-[#0F172A] font-bold">李</div>
+          <div>
+            <div class="font-semibold">李先生 · 精密機械公司負責人</div>
+            <div class="text-sm muted">機械零件工程圖繪製</div>
+          </div>
+        </div>
+        <p class="mt-3 text-sm">我們公司常需要將手繪草圖轉成可加工的CAD圖紙，Kudo Design 在兩天內就交件，線條精準、尺寸標註非常專業。</p>
+        <div class="mt-3">★★★★★</div>
+      </div>
+
+      <div class="glass p-4 rounded">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[--accent] flex items-center justify-center text-[#0F172A] font-bold">陳</div>
+          <div>
+            <div class="font-semibold">陳小姐 · 自動化設備設計師</div>
+            <div class="text-sm muted">DWG版本升級與結構轉換</div>
+          </div>
+        </div>
+        <p class="mt-3 text-sm">他們不但幫我轉成新版格式，還優化了標註與圖層。整體流程順暢、溝通快速，我很願意再合作。</p>
+        <div class="mt-3">★★★★☆</div>
+      </div>
+
+      <div class="glass p-4 rounded">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[--accent] flex items-center justify-center text-[#0F172A] font-bold">張</div>
+          <div>
+            <div class="font-semibold">張工程師 · 模具設計部門</div>
+            <div class="text-sm muted">模具組立圖代畫</div>
+          </div>
+        </div>
+        <p class="mt-3 text-sm">價格合理、溝通明確，交件準時，會再委託。</p>
+        <div class="mt-3">★★★★★</div>
+      </div>
+    </div>
+
+    <!-- Add review form (frontend only, shows immediately) -->
+    <div class="glass p-6 rounded">
+      <h3 class="font-semibold mb-3">留下你的評價（示範功能：前端即時顯示）</h3>
+      <form id="reviewForm" class="space-y-3" onsubmit="return addReview(event)">
+        <div class="grid md:grid-cols-2 gap-3">
+          <input id="revName" placeholder="姓名（或公司）" required>
+          <input id="revRole" placeholder="職稱 / 合作項目（例：DWG 轉檔）" required>
+        </div>
+        <textarea id="revMsg" rows="3" placeholder="你的評價" required></textarea>
+        <select id="revStar" aria-label="評分">
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+        </select>
+        <div class="flex gap-3">
+          <button type="submit" class="btn-primary">送出評價</button>
+          <button type="button" onclick="document.getElementById('reviewForm').reset()" class="px-4 py-2 border rounded">清除</button>
+        </div>
+        <p class="text-sm muted mt-2">（目前為前端示範，若要長期保存留言可接 Google Sheets / Formspree 等服務，我可協助串接）</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Blog (放首頁底部) -->
+  <section id="blog" class="container py-12">
+    <h2 class="text-2xl font-bold mb-6">機械設計小技巧</h2>
+
+    <!-- Article 1 -->
+    <article class="glass p-6 rounded mb-6">
+      <h3 class="text-xl font-semibold">如何避免 CAD 圖面標註重疊</h3>
+      <p class="muted mt-3">標註重疊常見於空間緊湊的圖面，會降低可讀性並造成製造誤解。建議：使用一致的標註字級、適當移出參照線、善用註解表格與 BOM，建立公司標註模板能顯著降低錯誤。</p>
+      <p class="muted mt-2"><strong>重點：</strong>統一標註規範、檢查交叉標註、必要時使用表格整理尺寸。</p>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="glass p-6 rounded mb-6">
+      <h3 class="text-xl font-semibold">SolidWorks 繪圖常見錯誤與修改技巧</h3>
+      <p class="muted mt-3">常見錯誤有未鎖定基準、圖層命名混亂、標註公差缺失。修改技巧包括鎖定參考、在工程圖範本內設定公差、並建立清單檢查（尺寸一致性、標註清晰度、BOM 完整性）。</p>
+      <p class="muted mt-2"><strong>實務建議：</strong>交付前使用檢查清單以確保加工可行性與圖面一致性。</p>
+    </article>
+
+    <p class="muted">未來可在此定期新增文章，增加網站內容深度以提升搜尋能見度。</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container py-12">
+    <h2 class="text-2xl font-bold mb-4">關於我們</h2>
+    <p class="muted mb-4">Kudo Design 專注於製圖精準度與交期可靠性，提供純繪圖服務（不做現場工程或整廠外包）。我們優先考量可製造性並尊重客戶資料保密。</p>
+    <ul class="muted list-disc ml-5">
+      <li>速度：快速回覆並按時交件</li>
+      <li>品質：依製造需求優化圖面標註與公差</li>
+      <li>保密：對客戶圖檔與資料嚴格保密</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container py-12">
+    <h2 class="text-2xl font-bold mb-4">聯絡我們</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="glass p-6 rounded">
+        <h3 class="font-semibold">聯絡資訊</h3>
+        <p class="muted mt-2">Email：<a href="mailto:c0925279626@gmail.com">c0925279626@gmail.com</a></p>
+        <p class="muted mt-2">服務：CAD 代畫 / SolidWorks 代畫 / 圖紙轉換</p>
+        <p class="muted mt-2">回覆時間：工作日 1–2 個工作天</p>
+      </div>
+
+      <div class="glass p-6 rounded">
+        <h3 class="font-semibold mb-3">直接寄信詢價（會開啟你的郵件客戶端）</h3>
+        <form onsubmit="return sendMail(event)" class="space-y-3">
+          <input id="qName" placeholder="姓名 或 公司" required>
+          <input id="qPhone" placeholder="聯絡電話（選填）">
+          <input id="qEmail" placeholder="你的 Email（選填）">
+          <textarea id="qMsg" rows="5" placeholder="描述你的需求（圖紙類型、數量、交期）" required></textarea>
+          <div class="flex gap-3">
+            <button class="btn-primary" type="submit">📩 立即寄信</button>
+            <button type="reset" class="px-4 py-2 border rounded">清除</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating CTA -->
+<a class="floating-cta" href="mailto:c0925279626@gmail.com?subject=CAD代畫服務詢價&body=您好，我想詢問CAD代畫服務：%0A%0A- 服務項目：%0A- 圖紙數量：%0A- 交期：%0A- 其他備註：" title="立即詢價">
+  <div class="bg-[--accent] text-[#0F172A] px-4 py-3 rounded-full flex items-center gap-2 shadow-lg">
+    <span>📩</span><span class="font-semibold">立即詢價</span>
+  </div>
+</a>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>© <span id="yr"></span> Kudo Design 精準CAD代畫服務 · 聯絡：<a href="mailto:c0925279626@gmail.com">c0925279626@gmail.com</a></div>
+      <div class="text-sm muted">關鍵字：CAD代畫 · SolidWorks代畫 · 圖紙轉換 · 機械設計</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// set year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// mobile menu toggle
+document.getElementById('menuBtn')?.addEventListener('click', function(){
+  const m = document.getElementById('mobileMenu');
+  const open = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', String(!open));
+  if(m) m.classList.toggle('hidden');
+});
+
+// Front-end review posting (no backend)
+function addReview(e){
+  e.preventDefault();
+  const name = document.getElementById('revName').value.trim();
+  const role = document.getElementById('revRole').value.trim();
+  const msg = document.getElementById('revMsg').value.trim();
+  const star = document.getElementById('revStar').value || '★★★★★';
+  if(!name || !role || !msg){ alert('請填寫姓名/職稱與評價內容'); return false; }
+
+  const container = document.getElementById('reviewsList');
+  const card = document.createElement('div');
+  card.className = 'glass p-4 rounded';
+  card.innerHTML = `
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-[--accent] flex items-center justify-center text-[#0F172A] font-bold">${name.charAt(0)}</div>
+      <div>
+        <div class="font-semibold">${name} · ${role}</div>
+        <div class="text-sm muted">${role}</div>
+      </div>
+    </div>
+    <p class="mt-3 text-sm">${msg}</p>
+    <div class="mt-3">${star}</div>
+  `;
+  container.appendChild(card);
+  document.getElementById('reviewForm').reset();
+  // scroll to new review
+  card.scrollIntoView({behavior:'smooth', block:'center'});
+  return false;
+}
+
+// sendMail uses mailto to open user's email client
+function sendMail(e){
+  e.preventDefault();
+  const n = encodeURIComponent(document.getElementById('qName').value || '');
+  const ph = encodeURIComponent(document.getElementById('qPhone').value || '');
+  const em = encodeURIComponent(document.getElementById('qEmail').value || '');
+  const msg = encodeURIComponent(document.getElementById('qMsg').value || '');
+  const body = `姓名／公司：${n}%0A電話：${ph}%0AEmail：${em}%0A%0A需求：%0A${msg}`;
+  window.location.href = `mailto:c0925279626@gmail.com?subject=CAD代畫詢價&body=${body}`;
+  return false;
+}
+</script>
+</body>
+</html>
+
