@@ -309,19 +309,65 @@ Kudo Design 是專業的 <strong>CAD代畫服務團隊</strong>，
       </div>
 
       <div class="glass p-6 rounded">
-        <h3 class="font-semibold mb-3">直接寄信詢價（會開啟你的郵件客戶端）</h3>
-        <form onsubmit="return sendMail(event)" class="space-y-3">
-          <input id="qName" placeholder="姓名 或 公司" required>
-          <input id="qPhone" placeholder="聯絡電話（選填）">
-          <input id="qEmail" placeholder="你的 Email（選填）">
-          <textarea id="qMsg" rows="5" placeholder="描述你的需求（圖紙類型、數量、交期）" required></textarea>
-          <div class="flex gap-3">
-            <button class="btn-primary" type="submit">📩 立即寄信</button>
-            <button type="reset" class="px-4 py-2 border rounded">清除</button>
-          </div>
-        </form>
-      </div>
+  <h3 class="font-semibold mb-3">直接寄信詢價（自動寄信，不開郵件程式）</h3>
+
+  <!-- ✅ Web3Forms 表單 -->
+  <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-3">
+
+    <!-- 🔧 換成你的 Access Key（登入 web3forms.com 取得） -->
+    <input type="hidden" name="access_key" value="cda37390-4d9d-4746-b6c9-ebbe089a572d">
+    <input type="hidden" name="subject" value="Kudo Design 網站詢價">
+    <input type="hidden" name="from_name" value="Kudo Design 表單">
+
+    <label>姓名 / 公司</label>
+    <input type="text" name="name" placeholder="姓名 或 公司" required>
+
+    <label>聯絡電話（選填）</label>
+    <input type="text" name="phone" placeholder="聯絡電話（選填）">
+
+    <label>Email（選填）</label>
+    <input type="email" name="email" placeholder="你的 Email（選填）">
+
+    <label>詢價內容</label>
+    <textarea name="message" rows="5" placeholder="描述你的需求（圖紙類型、數量、交期）" required></textarea>
+
+    <div class="flex gap-3">
+      <button class="btn-primary" type="submit">📩 立即寄信</button>
+      <button type="reset" class="px-4 py-2 border rounded">清除</button>
     </div>
+
+    <!-- ✅ 成功與失敗提示 -->
+    <p id="successMessage" class="text-green-400 mt-4" style="display:none;">✅ 已成功寄出，我們會盡快回覆您！</p>
+    <p id="errorMessage" class="text-red-400 mt-4" style="display:none;">❌ 寄出失敗，請稍後再試。</p>
+  </form>
+</div>
+
+<!-- 💡 Web3Forms 寄信 + 成功提示 JS -->
+<script>
+  const form = document.getElementById("quoteForm");
+  const successMsg = document.getElementById("successMessage");
+  const errorMsg = document.getElementById("errorMessage");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      successMsg.style.display = "block";
+      errorMsg.style.display = "none";
+    } else {
+      successMsg.style.display = "none";
+      errorMsg.style.display = "block";
+    }
+  });
+</script>
   </section>
 
 </main>
@@ -399,6 +445,7 @@ function sendMail(e){
 </script>
 </body>
 </html>
+
 
 
 
