@@ -325,8 +325,8 @@ Kudo Design 是專業的 <strong>CAD代畫服務團隊</strong>，
     <label>聯絡電話（選填）</label>
     <input type="text" name="phone" placeholder="聯絡電話（選填）" class="w-full border p-2 rounded">
 
-    <label>Email（選填）</label>
-    <input type="email" name="email" placeholder="你的 Email（選填）" class="w-full border p-2 rounded">
+    <label>Email（必填）</label>
+    <input type="email" name="email" placeholder="請輸入有效 Email" required class="w-full border p-2 rounded">
 
     <label>詢價內容</label>
     <textarea name="message" rows="5" placeholder="描述你的需求（圖紙類型、數量、交期）" required class="w-full border p-2 rounded"></textarea>
@@ -377,6 +377,7 @@ document.getElementById('quoteForm').addEventListener('submit', async (e) => {
   }
 });
 </script>
+
 
 
     <!-- ✅ 成功與失敗提示 -->
@@ -488,6 +489,7 @@ function sendMail(e){
 </script>
 </body>
 </html>
+
 
 
 
