@@ -309,7 +309,7 @@ Kudo Design 是專業的 <strong>CAD代畫服務團隊</strong>，
       </div>
 
       <div class="glass p-6 rounded">
-  <h3 class="font-semibold mb-3">直接寄信詢價（自動寄信，不開郵件程式）</h3>
+  <h3 class="font-semibold mb-3">直接寄信詢價</h3>
 
   <!-- ✅ Web3Forms 表單 -->
   <form id="quoteForm" class="space-y-3">
@@ -319,7 +319,7 @@ Kudo Design 是專業的 <strong>CAD代畫服務團隊</strong>，
     <input type="hidden" name="subject" value="Kudo Design 網站詢價">
     <input type="hidden" name="from_name" value="Kudo Design 表單">
 
-    <label>姓名 / 公司</label>
+    <label>姓名 / 公司（必填）</label>
     <input type="text" name="name" placeholder="姓名 或 公司" required class="w-full border p-2 rounded">
 
     <label>聯絡電話（選填）</label>
@@ -328,7 +328,7 @@ Kudo Design 是專業的 <strong>CAD代畫服務團隊</strong>，
     <label>Email（必填）</label>
     <input type="email" name="email" placeholder="請輸入有效 Email" required class="w-full border p-2 rounded">
 
-    <label>詢價內容</label>
+    <label>詢價內容（必填）</label>
     <textarea name="message" rows="5" placeholder="描述你的需求（圖紙類型、數量、交期）" required class="w-full border p-2 rounded"></textarea>
 
     <div class="flex gap-3">
@@ -489,6 +489,7 @@ function sendMail(e){
 </script>
 </body>
 </html>
+
 
 
 
