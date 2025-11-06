@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kudoconan9.github.io/kudo-design/sitemap.txt
+Sitemap: https://kudoconan9.github.io/kudo-design/sitemap.xml
 
                 
+
 
 
