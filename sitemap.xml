@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!-- 遵循 sitemap 0.9 标准（GSC 官方支持） -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- 1. 网站根目录（优先级最高） -->
+  <url>
+    <loc>https://kudoconan9.github.io/kudo-design/</loc> <!-- 固定根URL -->
+    <lastmod>2025-11-20</lastmod> <!-- 最后更新日期（格式：YYYY-MM-DD） -->
+    <changefreq>weekly</changefreq> <!-- 更新频率：daily/weekly/monthly（根页建议weekly） -->
+    <priority>1.0</priority> <!-- 优先级：0.0-1.0（根页最高设1.0） -->
+  </url>
 
-<url>
-  <loc>https://kudoconan9.github.io/kudo-design/</loc>
-  <lastmod>2025-11-01T17:45:56+00:00</lastmod>
-</url>
+  <!-- 2. 示例：文档首页/栏目页（根据你的实际页面添加） -->
+  <url>
+    <loc>https://kudoconan9.github.io/kudo-design/docs</loc> <!-- 替换为你的文档页URL -->
+    <lastmod>2025-11-15</lastmod> <!-- 该页面最后更新日期 -->
+    <changefreq>weekly</changefreq> <!-- 文档页若常更新可设weekly -->
+    <priority>0.9</priority> <!-- 次高优先级 -->
+  </url>
 
+  <!-- 3. 示例：单个文档页（如安装指南） -->
+  <url>
+    <loc>https://kudoconan9.github.io/kudo-design/docs/installation</loc> <!-- 替换为具体文档URL -->
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq> <!-- 静态文档可设monthly -->
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 4. 示例：组件演示页（如按钮组件） -->
+  <url>
+    <loc>https://kudoconan9.github.io/kudo-design/components/button</loc> <!-- 替换为你的组件页URL -->
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq> <!-- 组件若常迭代可设weekly -->
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. 示例：关于页/介绍页 -->
+  <url>
+    <loc>https://kudoconan9.github.io/kudo-design/about</loc> <!-- 替换为你的关于页URL -->
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>monthly</changefreq> <!-- 静态页面设monthly/yearly -->
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 👉 重要：根据你的实际网站结构，复制上面的<url>节点，补充所有需要被索引的页面 -->
+  <!-- 例如：更多组件页、教程页、FAQ页等，确保URL真实可访问（无404） -->
 
 </urlset>
