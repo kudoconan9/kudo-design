@@ -102,19 +102,21 @@
   }
   /* 回到頂部按鈕 */
   #backToTop {
-    position: fixed;
-    left: 18px;
-    bottom: 80px;
-    z-index: 50;
-    background: rgba(56, 189, 248, 0.8);
-    color: var(--bg);
-    padding: 0.75rem;
-    border-radius: 50%;
-    border: none;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    display: none;
-  }
+  position: fixed;
+  left: 18px;
+  bottom: 80px;
+  z-index: 50;
+  background: rgba(56, 189, 248, 0.8);
+  color: var(--bg);
+  padding: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+}
   #backToTop:hover {
     background: var(--accent);
     transform: scale(1.1);
@@ -592,13 +594,12 @@ document.querySelector('input[name="email"]').addEventListener('input', function
 const backToTopBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    backToTopBtn.classList.remove('hidden');
+    backToTopBtn.style.opacity = "1";
+    backToTopBtn.style.pointerEvents = "auto";
   } else {
-    backToTopBtn.classList.add('hidden');
+    backToTopBtn.style.opacity = "0";
+    backToTopBtn.style.pointerEvents = "none";
   }
-});
-backToTopBtn?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
 <!-- 🟢 LINE QR 浮動按鈕 -->
