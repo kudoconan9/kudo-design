@@ -20,9 +20,16 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
 
+  // 基礎 tracking
   gtag('config', 'AW-18161890658');
+
+  // 🔥 關鍵：conversion linker（提高驗證成功率）
+  gtag('config', 'AW-18161890658', {
+    allow_enhanced_conversions: true
+  });
 </script>
   
 <!-- Tailwind CDN -->
@@ -560,9 +567,15 @@ document.getElementById('quoteForm').addEventListener('submit', async (e) => {
       successMsg.style.display = "block";
       form.reset();
       
+  console.log("form success triggered");
+
+setTimeout(() => {
+  console.log("Google Ads conversion fired");
+
   gtag('event', 'conversion', {
-    'send_to': 'AW-18161890658/pyrTCJiiuq0cEOLqodRD'
+    send_to: 'AW-18161890658/pyrTCJiiuq0cEOLqodRD'
   });
+}, 800);
     } else {
       status.textContent = `❌ 寄出失敗：${result.message || "請稍候再試"}`;
       status.style.color = "#ef4444";
